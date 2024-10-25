@@ -100,10 +100,6 @@ curl -X POST "http://localhost:3003/search" -H "Content-Type: application/json" 
     }'
 ```
 
-## Dificuldades da integração
-- O formato da data retornado pela api era diferente do formato esperado no para conversão no parser. Adicionei essa particularidade.
-- Na resposta da api, no campo de partes relacionadas o campo de advogado é representado por `advogado`, no JSON de testes era `advogado(a)`. Adicionei essa particularidade.
-
 ## Melhorias
 - Automatizar os pipelines com dags.
 - Utilizar kubernetes para orquestrar os serviços.
@@ -114,4 +110,3 @@ curl -X POST "http://localhost:3003/search" -H "Content-Type: application/json" 
 - [Make](https://www.gnu.org/software/make/)
 - [Python 3.11](https://www.python.org/)
 - [Poetry 1.8.2](https://python-poetry.org/)
-# projeto-buscador
