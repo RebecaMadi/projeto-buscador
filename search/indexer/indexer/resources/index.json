@@ -1,0 +1,84 @@
+{
+  "settings": {
+    "index": {
+      "refresh_interval": "10s",
+      "number_of_shards": "1",
+      "number_of_replicas": "1",
+      "analysis": {
+        "analyzer": {
+          "default": {
+            "filter": [
+              "lowercase",
+              "asciifolding"
+            ],
+            "type": "custom",
+            "tokenizer": "standard"
+          }
+        }
+      }
+    }
+  },
+  "mappings": {
+    "dynamic": "strict",
+    "properties": {
+      "number": {
+        "type": "keyword"
+      },
+      "date": {
+        "type": "date"
+      },
+      "court": {
+        "type": "keyword"
+      },
+      "judge": {
+        "type": "text",
+        "analyzer": "default"
+      },
+      "kind": {
+        "type": "keyword"
+      },
+      "lawyers": {
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "default"
+          }
+        }
+      },
+      "nature": {
+        "type": "text",
+        "analyzer": "default"
+      },
+      "related_people": {
+        "properties": {
+          "name": {
+            "type": "text",
+            "analyzer": "default"
+          },
+          "role": {
+            "type": "text",
+            "analyzer": "default"
+          }
+        }
+      },
+      "subject": {
+        "type": "text",
+        "analyzer": "default"
+      },
+      "value": {
+        "type": "float"
+      },
+      "activities": {
+        "properties": {
+          "date": {
+            "type": "date"
+          },
+          "description": {
+            "type": "text",
+            "analyzer": "default"
+          }
+        }
+      }
+    }
+  }
+}

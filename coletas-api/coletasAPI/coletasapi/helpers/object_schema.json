@@ -1,0 +1,92 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+  "tribunal": {
+      "type": "string",
+      "enum": ["TJCE", "TJAL"]
+  },
+  "classe": {
+      "type": ["string", "null"]
+  },
+  "area": {
+      "type": ["string", "null"]
+  },
+  "assunto": {
+      "type": ["string", "null"]
+  },
+  "data_de_distribuicao": {
+      "type": ["string", "null"],
+      "format": "date"
+  },
+  "juiz": {
+      "type": ["string", "null"]
+  },
+  "valor_da_acao": {
+      "type": ["number", "null"]
+  },
+  "segredo_justica": {
+      "type": "boolean"
+  },
+  "existe": {
+      "type": "boolean"
+  },
+  "partes_do_processo": {
+      "type": "array",
+      "items": {
+      "type": "object",
+      "properties": {
+          "nome": {
+          "type": "string"
+          },
+          "papel": {
+          "type": "string"
+          },
+          "advogado(as)": {
+          "type": ["array", "null"],
+          "items": {
+              "type": "string"
+          }
+          }
+      },
+      "required": ["nome", "papel"]
+      }
+  },
+  "lista_das_movimentacoes": {
+      "type": "array",
+      "items": {
+      "type": "object",
+      "properties": {
+          "data": {
+          "type": "string",
+          "format": "date"
+          },
+          "movimento": {
+          "type": "string"
+          }
+      },
+      "required": ["data", "movimento"]
+      }
+  },
+  "instancia": {
+      "type": "integer",
+      "enum": [1, 2]
+  },
+  "numero_do_processo": {
+      "type": ["string", "null"]
+  }
+  },
+  "required": [
+  "tribunal",
+  "classe",
+  "area",
+  "assunto",
+  "data_de_distribuicao",
+  "juiz",
+  "valor_da_acao",
+  "partes_do_processo",
+  "lista_das_movimentacoes",
+  "instancia",
+  "numero_do_processo"
+  ]
+}

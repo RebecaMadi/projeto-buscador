@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "coletasapi"
+version = "0.1.0"
+description = ""
+authors = ["Rebeca Madi oliveira <rebeca.oliveira@jusbrasil.com.br>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+bs4 = "^0.0.2"
+requests = "^2.32.3"
+jsonschema = "^4.23.0"
+urllib3 = "^2.2.2"
+cryptography = "^43.0.1"
+requests-toolbelt = "^1.0.0"
+httpx = "^0.27.2"
+fastapi = "^0.112.2"
+uvicorn = "^0.30.6"
+pymongo = "^4.8.0"
+pytest = "^8.3.2"
+pytest-mock = "^3.14.0"
+aiokafka = "^0.11.0"
+asyncio = "^3.4.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

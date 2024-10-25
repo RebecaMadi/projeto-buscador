@@ -1,0 +1,44 @@
+{
+    "court": {"rawValue": "TJCE"},
+    "nature": "Ação Ordinária",
+    "kind": "Cível",
+    "subject": "Exploração do trabalho infantil",
+    "distributionDate": 1683676800,
+    "judgeName": "Dr. João Silva",
+    "value": 50000.75,
+    "justiceSecret": false,
+    "courtInstance": 1,
+    "number": "1234567-89.2023.8.09.0001",
+    "relatedPeople": [
+        {
+            "id": "123456789",
+            "nameRaw": "Maria Souza",
+            "name": "Maria Souza",
+            "role": {"rawValue": "Autor", "normalized": "Autor"},
+            "author": true
+        },
+        {
+            "id": "123456789",
+            "nameRaw": "Empresa XYZ Ltda.",
+            "name": "Empresa Xyz Ltda.",
+            "role": {"rawValue": "Réu", "normalized": "Réu"},
+            "author": false
+        }
+    ],
+    "representedPersonLawyers": [
+        {
+            "nameRaw": "Dr. Carlos Almeida",
+            "name": "Carlos Almeida",
+            "representedPersonId": "123456789"
+        },
+        {
+            "nameRaw": "Dra. Ana Pereira",
+            "name": "Ana Pereira",
+            "representedPersonId": "123456789"
+        }
+    ],
+    "activities": [
+        {"date": 1683763200, "text": "Distribuído por sorteio"},
+        {"date": 1684108800, "text": "Citação expedida"}
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "tribunal" : null,
+    "classe" : null,
+    "area" : null,
+    "assunto" : null,
+    "data_de_distribuicao" : null,
+    "juiz" : null,
+    "valor_da_acao" : null,
+    "segredo_justica" : false,
+    "existe" : false,
+    "partes_do_processo" : [],
+    "lista_das_movimentacoes" : [],
+    "instancia" : null,
+    "numero_do_processo" : null
+}

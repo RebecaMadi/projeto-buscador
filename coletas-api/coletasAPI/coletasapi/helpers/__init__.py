@@ -1,0 +1,1 @@
+from .auxiliares import validaNumeroDeProcesso, valida_tempo_cache

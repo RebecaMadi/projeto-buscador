@@ -1,0 +1,1 @@
+from .middlewares import pagina_processo_parser
