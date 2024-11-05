@@ -1,0 +1,173 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.infoContainer {
+  display: flex;
+}
+
+.movements {
+  flex: 2;
+  margin-right: 20px;
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1); 
+  margin-top: 15px;
+}
+
+.movements h3 {
+  margin-bottom: 10px;
+}
+
+.info {
+  flex: 1;
+  background-color: #E3F2FD;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info div {
+  margin-bottom: 8px;
+}
+
+.sidebar {
+  flex: 1;
+  font-size: 14px;
+  padding-left: 20px;
+}
+
+.offerButton {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 4px;
+}
+
+.offerButton:hover {
+  background-color: #45a049;
+}
+
+.partiesContainer {
+  margin-top: 15px;
+}
+
+.partiesList {
+  list-style: none;
+  padding: 0;
+}
+
+.partyItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.partyItem:last-child {
+  border-bottom: none;
+}
+
+.partyName {
+  font-weight: bold;
+}
+
+.partyRole {
+  color: #666;
+}
+
+.lawyerItem {
+  padding: 8px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.lawyerItem:last-child {
+  border-bottom: none;
+}
+
+.lawyerName {
+  font-weight: bold;
+  display: block;
+}
+
+.representedPerson {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+  display: block;
+}
+
+.highlightTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #4caf50;
+}
+
+.highlightContainer {
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1); 
+  margin-top: 15px;
+}
+
+.processInfoContainer {
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1); 
+  margin-top: 15px;
+}
+.processInfoContainer div {
+  margin-bottom: 8px; 
+}
+
+.processInfoContainer strong {
+  display: block; 
+  margin-bottom: 4px; 
+}
+
+.processInfoContainer p {
+  margin: 0; 
+}
+
+.pageTitle {
+  background-color: #FFFFFF;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 0, 0, 0.1); 
+  padding-bottom: 15px;
+}
+.pageTitle h2 {
+  display: block; 
+  margin-bottom: 4px; 
+}
+
+.pageTitle p {
+  margin: 0; 
+}

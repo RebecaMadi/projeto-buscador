@@ -1,12 +1,13 @@
 # Projeto Mini-Buscador
 
 Para entender melhor o projeto leia os READMES indicados abaixo:
+- Leia o README apenas do **frontend** [aqui.](./FRONTEND.md)
 - Leia o README apenas do **coletas de dados** [aqui.](./coletas-api/README.md)
 - Leia o README apenas do **enriquecimento de dados com kafka** [aqui.](./kb-kafka-pipeline/README.md)
 - Leia o README apenas do **projeto de search** [aqui.](./search/README.md)
 
 ## Estrutura
-![Estrutura atual do projeto](./imagens/minijus_arq_1.png)
+![Estrutura atual(desatualizada TT) do projeto](./imagens/minijus_arq_1.png)
 
 **Observação**: certifique-se de que as aplicações estão ativas.
 

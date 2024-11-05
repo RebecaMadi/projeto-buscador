@@ -1,0 +1,18 @@
+.filter {
+  margin-right: 10px; 
+}
+
+.select {
+  padding: 9px; 
+  border: 1px solid #007BFF; 
+  border-radius: 5px; 
+  background-color: #FFFFFF; 
+  cursor: pointer; 
+  transition: border-color 0.3s ease; 
+  font-size: 17.5px;
+  width: 100%; 
+}
+
+.select:hover {
+  border-color: #0056b3; 
+}
