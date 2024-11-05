@@ -1,4 +1,4 @@
-# Projeto-KB: pipeline de enriquecimento de dados
+# Pipeline de enriquecimento de dados
 
 Este README tem como objetivo fornecer informações sobre a minha implementação do pipeline de enriquecimento de dados utilizando Kafka.
 
