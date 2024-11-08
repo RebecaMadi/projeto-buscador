@@ -10,19 +10,25 @@ export const searchQuery = {
   },
   resolve: async (_, { query, court }) => {
     try {
-      let params = {};
-      params.query = query;
+      const requestBody = {
+        query: query,
+        filters: {},
+      };
+
       if (court) {
-        params.court = court;
+        requestBody.filters.court = court;
       }
-      const response = await axios.get('http://localhost:9777/search-serp', {
-        params, 
+
+      const response = await axios.post('http://localhost:3003/search', requestBody, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
       });
       console.log(response.data)
       return response.data; 
     } catch (error) {
       console.error("Erro ao buscar processos com a query:", query, error);
-      throw new Error("Não foi possível realizar a busca.");
+      throw new Error("Não foi possível realizar a busca. ", error);
     }
   }
 }

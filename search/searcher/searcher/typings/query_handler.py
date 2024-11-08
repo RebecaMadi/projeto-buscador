@@ -6,13 +6,13 @@ class QueryHandler:
     def __init__(self, query):
         self.elasticsearch_query_dsl = {}
         self.elasticsearch_query_dsl["query"] = {"bool": {}}
-        self.get_size(query)
-        self.get_from(query)
+        self.set_size(query)
+        self.set_from(query)
     
-    def get_size(self, query):
+    def set_size(self, query):
         self.elasticsearch_query_dsl["size"] = query.get("limit", 10) 
     
-    def get_from(self, query):
+    def set_from(self, query):
         self.elasticsearch_query_dsl["from"] = query.get("offset", 0)
     
     def add_query(self, query):
@@ -48,7 +48,7 @@ class QueryHandler:
                 }
             })
 
-    def add_token_filters(self, query):
+    def add_filters(self, query):
         self.add_court_filter(query)
         self.add_date_filter(query)
     
@@ -59,7 +59,7 @@ class QueryHandler:
         if query.get("filters") or number:
             self.elasticsearch_query_dsl["query"]["bool"]["filter"] = []
         if query.get("filters"):
-            self.add_token_filters(query)
+            self.add_filters(query)
         if number:
             query["query"] = re.sub(number, '', query["query"])
             self.add_number_filter(number)
@@ -73,6 +73,6 @@ class QueryHandler:
         self.elasticsearch_query_dsl["query"]["bool"]["filter"] = []
         self.add_number_filter(query["query"])
         if query.get("filters"):
-            self.add_token_filters(query)
+            self.add_filters(query)
         
         return (self.elasticsearch_query_dsl, 0)

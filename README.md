@@ -58,6 +58,38 @@ Para subir o serviço de busca, execute:
 make run-searcher
 ```
 
+## backend-graphql
+Para subir o graphql que se comunica com a mock-api, execute:
+
+```bash
+cd backend-graphql
+```
+```bash
+pnpm i
+```
+```bash
+pnpm run dev
+```
+
+## frontend
+Para subir o frontend, execute:
+
+```bash
+cd frontend-boilerplate
+```
+```bash
+pnpm i
+```
+```bash
+pnpm run dev
+```
+
+Você poderá visualizar a página em:
+
+```bash
+http://localhost:3000
+```
+
 ### Testes
 
 Para rodar os testes unitários dos projetos, execute:

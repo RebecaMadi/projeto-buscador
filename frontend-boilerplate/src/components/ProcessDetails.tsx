@@ -36,8 +36,12 @@ const ProcessDetails: FC<ProcessDetailsProps> = ({ process, variant, onShowOffer
 
   const isVariantA = variant === 'variant-a';
   const formatDate = (dateString: string): string => {
-    const [year, month, day] = dateString.split('-');
-    return `${day}/${month}/${year}`;
+    if(dateString!=undefined && dateString.includes("-")){
+      const [year, month, day] =  dateString.split('-') ;
+      return `${day}/${month}/${year}`;
+    }else{
+      return "--/--/----"
+    }
   };
 
   return (

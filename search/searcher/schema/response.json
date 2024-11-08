@@ -38,7 +38,7 @@
             "description": "Natureza do processo",
             "type": "string"
           },
-          "kind": {
+          "type": {
             "title": "Kind",
             "description": "Tipo de processo",
             "type": "string"
@@ -48,7 +48,7 @@
             "description": "Assunto do processo",
             "type": "string"
           },
-          "date": {
+          "distributionDate": {
             "title": "Date",
             "description": "Data de distribuição do processo",
             "type": "string",
@@ -59,7 +59,7 @@
             "description": "Juiz responsável pelo processo",
             "type": "string"
           },
-          "value": {
+          "caseValue": {
             "title": "Value",
             "description": "Valor da causa",
             "type": "number"
@@ -86,7 +86,7 @@
               }
             }
           },
-          "lawyers": {
+          "representedPersonLawyers": {
             "title": "Lawyers",
             "description": "Advogados envolvidos no processo",
             "type": "array",
@@ -103,7 +103,7 @@
               }
             }
           },
-          "activities": {
+          "movements": {
             "title": "Activities",
             "description": "Andamentos do processo",
             "type": "array",
@@ -135,7 +135,7 @@
           "id",
           "number",
           "related_people",
-          "activities"
+          "movements"
         ]
       }
     }

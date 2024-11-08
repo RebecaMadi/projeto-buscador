@@ -9,8 +9,14 @@ export const searchQueryId = {
   },
   resolve: async (_, { id }) => {
     try {
-      console.log("???");
-      const response = await axios.get(`http://localhost:9777/search-serp/${id}`); 
+      const requestBody = {
+        id: id,
+      };
+      const response = await axios.post('http://localhost:3003/searchbyid', {"id": id}, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       return response.data; 
     } catch (error) {
       console.error("Erro ao buscar o processo com o ID:", id, error);
