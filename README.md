@@ -7,7 +7,7 @@ Para entender melhor o projeto leia os READMES indicados abaixo:
 - Leia o README apenas do **projeto de search** [aqui.](./search/README.md)
 
 ## Estrutura
-![Estrutura atual(desatualizada TT) do projeto](./imagens/minijus_arq_1.png)
+![Estrutura atual do projeto](./imagens/arq_buscador.png)
 
 **Observação**: certifique-se de que as aplicações estão ativas.
 
