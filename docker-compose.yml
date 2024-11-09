@@ -195,6 +195,15 @@ services:
     environment:
       - WAIT_HOSTS=coletasapi:8000
 
+  mock-api:
+    build: ./mock-api
+    ports:
+      - "9777:9777"
+    volumes:
+      - ./mock-api/:/usr/src/app
+      - /usr/src/app/node_modules
+    command: npm start
+
 volumes:
   esdata:
   mongodb:

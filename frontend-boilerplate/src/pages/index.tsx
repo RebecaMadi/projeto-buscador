@@ -107,7 +107,7 @@ const Home: FC = () => {
   padronizar os erros
   testes de integração
   */
-  const [simulating] = useState<boolean>(true); 
+  const [simulating] = useState<boolean>(false); 
 
   const { loading: loadingVariant} = useQuery(SORTED_EXP_QUERY, {
     variables: { alternative }, 
@@ -196,7 +196,7 @@ const Home: FC = () => {
         </div>
       )}
       <SearchBar onSearch={handleSearch} />
-      {!selectedProcess && results.length > 0 && <ResultList results={results} onSelect={handleSelectProcess} />}
+      {!selectedProcess &&  <ResultList results={results} onSelect={handleSelectProcess} />}
       {selectedProcess && (
         <ProcessDetails
           process={selectedProcess}

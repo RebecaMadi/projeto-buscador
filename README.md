@@ -22,20 +22,29 @@ docker-compose build
 Para subir a infraestrutura, execute na raiz do projeto:
 
 ```bash
-make run-infra
+make run-app
 ```
 
-Para subir os tópicos do kafka, execute na raiz do projeto:
+### backend-graphql
+Para subir o graphql, execute:
 
 ```bash
-make run-pipeline-kb-apps
+make run-graphql
 ```
 
-Para subir a api de coletas, execute na raiz do projeto:
+### frontend
+Para subir o frontend, execute:
 
 ```bash
-make run-coletas-api 
+make run-frontend
 ```
+
+Você poderá visualizar a página em:
+
+```bash
+http://localhost:3000
+```
+
 ### Indexação
 
 Verififque se há dados salvos no banco de dados antes de iniciar a indexação. Para isso execute o comando a seguir, ele irá disparar um script em python para fazer 8 requisições à API de coletas. O fluxo do pipeline deve seguir e assim os dados serão inseridos no postgres.
@@ -50,45 +59,7 @@ Para realizar o pipeline de indexação do elasticsearch, execute:
 make run-indexer-pipeline
 ```
 
-### Buscador
-
-Para subir o serviço de busca, execute:
-
-```bash
-make run-searcher
-```
-
-## backend-graphql
-Para subir o graphql que se comunica com a mock-api, execute:
-
-```bash
-cd backend-graphql
-```
-```bash
-pnpm i
-```
-```bash
-pnpm run dev
-```
-
-## frontend
-Para subir o frontend, execute:
-
-```bash
-cd frontend-boilerplate
-```
-```bash
-pnpm i
-```
-```bash
-pnpm run dev
-```
-
-Você poderá visualizar a página em:
-
-```bash
-http://localhost:3000
-```
+13 documentos deverão ser indexados no elasticsearch.
 
 ### Testes
 

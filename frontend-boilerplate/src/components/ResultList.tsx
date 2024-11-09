@@ -13,9 +13,12 @@ interface ResultListProps {
 }
 
 const ResultList: FC<ResultListProps> = ({ results, onSelect }) => {
+  console.log(results)
   return (
     <div className={styles.resultList}>
-      {results.map((result) => (
+      {results.length === 0 || results[0] === undefined? (
+        <p> Não conseguimos encontrar um resultado para a sua pesquisa :(</p>
+      ) : (results.map((result) => (
         <div 
           key={result.id} 
           className={styles.resultItem}
@@ -27,7 +30,7 @@ const ResultList: FC<ResultListProps> = ({ results, onSelect }) => {
             onSelect={onSelect} 
           />
         </div>
-      ))}
+      )))}
     </div>
   );
 };

@@ -18,9 +18,6 @@ stop-elastic:
 purge-elastic:
 	@docker-compose down -v elasticsearch kibana
 
-.PHONY: run-infra
-run-infra: run-kafka run-database run-elastic
-
 .PHONY: run-pipeline-apps
 run-pipeline-kb-apps:
 	@docker-compose up -d parser 
@@ -67,3 +64,15 @@ run-indexer-pipeline:
 
 run-searcher:
 	@docker-compose up -d searcher 
+
+run-graphql:
+	cd backend-graphql && pnpm i && pnpm run dev 
+
+run-frontend:
+	cd frontend-boilerplate && pnpm i && pnpm run dev 
+
+run-mock-api:
+	@docker-compose up -d mock-api
+
+.PHONY: run-infra
+run-app: run-kafka run-database run-elastic run-pipeline-kb-apps run-coletas-api run-searcher run-mock-api
