@@ -84,12 +84,12 @@ make stop-all
 
 ## Como executar
 
-Exemplo de requisição para o endpoint de coletas `localhoat:8000`:
+- Exemplo de requisição para o endpoint de coletas `localhoat:8000`:
 ```bash
 curl -X GET "http://localhost:8000/lawsuit?lawsuit_number=0709782-13.2022.8.02.0058&max_cache_age_seconds=600000"
 ```
 
-Exemplo de requisição para o endpoint de busca `localhoat:3003`:
+- Exemplo de requisição para o endpoint de busca `localhoat:3003`:
 ```bash
 curl -X POST "http://localhost:3003/search" -H "Content-Type: application/json" -d '{
         "query": "\"José Cícero Alves da Silva\"",
@@ -102,6 +102,14 @@ curl -X POST "http://localhost:3003/search" -H "Content-Type: application/json" 
         "limit": 1,
         "offset": 0
     }'
+```
+
+- Exemplo de consultas para o buscador:
+```bash
+0729685-21.2016.8.02.0001
+```
+```bash
+0710802-55.2018.8.02.0001
 ```
 
 ## Melhorias
