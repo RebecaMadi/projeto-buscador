@@ -10,8 +10,8 @@ Para entender melhor o projeto leia os READMES indicados abaixo:
 ![Estrutura atual do projeto](./imagens/arq_buscador.png)
 
 Para entender melhor os fluxos, leia:
-- Fluxo dos **processos**: [LAWSUIT_FLOW.md].(./LAWSUIT_FLOW.md)
-- Fluxo dos **usuários**: [USER_FLOW.md]. (./USER_FLOW.md)
+- Fluxo dos **processos**: [LAWSUIT_FLOW.md.](./LAWSUIT_FLOW.md)
+- Fluxo dos **usuários**: [USER_FLOW.md.](./USER_FLOW.md)
 
 **Observação**: certifique-se de que as aplicações estão ativas.
 
