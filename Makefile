@@ -66,13 +66,13 @@ run-searcher:
 	@docker-compose up -d searcher 
 
 run-graphql:
-	cd backend-graphql && pnpm i && pnpm run dev 
+	@docker-compose up -d backend
 
 run-frontend:
-	cd frontend-boilerplate && pnpm i && pnpm run dev 
+	@docker-compose up -d frontend
 
 run-mock-api:
 	@docker-compose up -d mock-api
 
 .PHONY: run-infra
-run-app: run-kafka run-database run-elastic run-pipeline-kb-apps run-coletas-api run-searcher run-mock-api
+run-app: run-kafka run-database run-elastic run-pipeline-kb-apps run-coletas-api run-searcher run-mock-api run-graphql run-frontend

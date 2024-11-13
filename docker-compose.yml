@@ -203,6 +203,16 @@ services:
       - ./mock-api/:/usr/src/app
       - /usr/src/app/node_modules
     command: npm start
+  
+  backend:
+    build: ./backend-graphql
+    ports:
+      - "4000:4000"
+  
+  frontend:
+    build: ./frontend-boilerplate
+    ports:
+      - "3010:3000"
 
 volumes:
   esdata:
