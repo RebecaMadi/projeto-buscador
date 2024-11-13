@@ -22,7 +22,7 @@ purge-elastic:
 run-pipeline-kb-apps:
 	@docker-compose up -d parser 
 	@docker-compose up -d classifier 
-	@docker-compose up -d db_sync
+	@docker-compose up -d db_sync --remove-orphans
 
 .PHONY: produce-example-message
 produce-example-message:

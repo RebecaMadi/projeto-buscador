@@ -55,7 +55,7 @@ class DatabaseManager:
 
         create_table_query = """
         CREATE TABLE IF NOT EXISTS lawsuits (
-            id SERIAL PRIMARY KEY,
+            id SERIAL,
             number VARCHAR(255),
             court VARCHAR(255),
             nature VARCHAR(255),
@@ -70,8 +70,9 @@ class DatabaseManager:
             related_people JSONB,
             represented_person_lawyers JSONB,
             activities JSONB,
-            documento_json JSONB
-        );
+            documento_json JSONB,
+            PRIMARY KEY (id, number, court_instance)
+            );
         """
         with self.conn.cursor() as cur:
             cur.execute(create_table_query)

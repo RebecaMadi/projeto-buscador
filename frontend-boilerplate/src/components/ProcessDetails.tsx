@@ -26,6 +26,7 @@ interface ProcessDetailsProps {
     nature: string;
     subject: string;
     judge: string;
+    instance: string;
   } | null;
   variant: string;
   onShowOfferModal: () => void;
@@ -91,8 +92,16 @@ const ProcessDetails: FC<ProcessDetailsProps> = ({ process, variant, onShowOffer
               <p>{process.nature}</p>
             </div>
             <div>
-              <strong>Juiz</strong>
-              <p>{process.judge}</p>
+            {process.judge !== "null" && (
+              <>
+                <strong>Juiz:</strong>
+                <p>{process.judge}</p>
+              </>
+            )}
+            </div>
+            <div>
+              <strong>Instancia:</strong>
+              <p>{process.instance}</p>
             </div>
           </div>
           <div className={styles.highlightContainer}>

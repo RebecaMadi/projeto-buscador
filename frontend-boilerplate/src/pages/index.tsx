@@ -60,6 +60,7 @@ const GET_PROCESS_DETAILS_QUERY = gql`
       nature
       subject
       judge
+      instance
     }
   }
 `;
@@ -86,27 +87,14 @@ const SORTED_EXP_QUERY = gql`
 `;
 
 const Home: FC = () => {
-  /*
-  Página central, tentei fazer um SPA.
-  */
+
   const [results, setResults] = useState<any[]>([]);
   const [selectedProcess, setSelectedProcess] = useState<any | null>(null);
   const [showOfferModal, setShowOfferModal] = useState(false);
   const [variant, setVariant] = useState<string | null>("control");
   const [alternative, setAlternative] = useState<string | null>("control"); 
   const [participating, setParticipating] = useState<boolean>(false); 
-
-  /*
-  IMPORTANTE: variável que define se o buscador estará em simulação ou não.
-  Se for false o sistema sorteará aleatóriamente.
-  Se for true será exibido uma caixa de texto no frontend para selecionar a variante.
-  Temos duas variantes: control e variant-a
-
-  piramide de testes
-  busca vazia
-  padronizar os erros
-  testes de integração
-  */
+  const [resultBool, setResultBool] = useState<Boolean>(false);
   const [simulating] = useState<boolean>(false); 
 
   const { loading: loadingVariant} = useQuery(SORTED_EXP_QUERY, {
@@ -145,6 +133,7 @@ const Home: FC = () => {
   });
 
   const handleSearch = (query: string, court: string) => {
+    setResultBool(true);
     searchProcesses({ variables: { query, court } });
   };
 
@@ -196,7 +185,7 @@ const Home: FC = () => {
         </div>
       )}
       <SearchBar onSearch={handleSearch} />
-      {!selectedProcess &&  <ResultList results={results} onSelect={handleSelectProcess} />}
+      {!selectedProcess &&  resultBool && <ResultList results={results} onSelect={handleSelectProcess} />}
       {selectedProcess && (
         <ProcessDetails
           process={selectedProcess}
